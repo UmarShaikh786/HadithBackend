@@ -17,7 +17,7 @@ const port=process.env.port || 5000
 app.get("/",(req,res)=>{
     res.send("hello umar shaikh")
 })
-app.use(cors({credentials:true,origin:'https://hadith-app-jade.vercel.app/'}))
+app.use(cors({credentials:true,origin:'https://hadith-app-jade.vercel.app'}))
 app.use(express.json())
 const hadithRouter=require('./routes/hadith')
 app.use("/hadith",hadithRouter)
